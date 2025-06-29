@@ -8,7 +8,7 @@
       f (import nixpkgs { inherit system; })
     );
     mkLibraryPath = pkgs: with pkgs; lib.makeLibraryPath [
-     stdenv.cc.cc  # numpy (on which scenedetect depends) needs C libraries
+     stdenv.cc.cc  # numpy needs C libraries
      zlib          # for ChromaDB
     ];
 
